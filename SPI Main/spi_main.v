@@ -1,7 +1,7 @@
 `timescale 1us / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 
+// Engineer: Ganshyam
 // 
 // Create Date: 26.05.2025 10:25:33
 // Design Name: 
@@ -9,7 +9,7 @@
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
-// Description: 
+// Description: SPI Master Synthesizable Module
 // 
 // Dependencies: 
 // 
@@ -42,7 +42,6 @@ module spi_main(
 		//
 		///////////////////////////////////Output Assignments/////////////////////////////////
 		//
-		
 		assign o_cs_n = r_cs_n;
 		assign o_clk = r_clk;
 		assign o_tx_done = r_tx_done;
@@ -195,7 +194,7 @@ module spi_main(
 							begin
 								//r_clk_ne <= w_clk;
 								r_cs_n_ne <= 0;
-								r_mosi_ne <= r_tx_byte[r_bit_index_tx_ne];			/////shifting
+								r_mosi_ne <= r_tx_byte[r_bit_index_tx_ne];				/////shifting
 								if(r_bit_index_tx_ne < 7)
 									begin
 										r_bit_index_tx_ne <= r_bit_index_tx_ne + 1;
